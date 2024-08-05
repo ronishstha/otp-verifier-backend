@@ -13,7 +13,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/verify", (req, res) => {
-  console.log("res", req.body);
   const { code } = req.body;
   if (code.slice(-1) === "7" || code.length !== INPUT_SIZE) {
     res.status(400).json({
